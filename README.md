@@ -2,13 +2,12 @@
 
 A Single Page Application providing users with all the information about accommodation, restaurants and activities available in a selected location. The information is displayed both on a map and as a text.
 
-
- 
 ## UX
- 
+
 Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
 
 In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
+
 - As a user type, I want to perform an action, so that I can achieve a goal.
 
 This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
@@ -16,8 +15,9 @@ This section is also where you would share links to any wireframes, mockups, dia
 ## Features
 
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
- 
+
 ### Existing Features
+
 - Feature 1 - allows users X to achieve Y, by having them fill out Z
 - ...
 
@@ -26,28 +26,31 @@ For some/all of your features, you may choose to reference the specific project 
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
 ### Features Left to Implement
+
 - Another feature idea
 
 ## Technologies Used
 
 HolidayPal uses following frameworks:
 
-- [Bootstrap] (https://getbootstrap.com/)
-    - The project uses **Bootstrap** to simplify managing layout and CSS elements.
+- [Bootstrap](https://getbootstrap.com/)
 
-- [Google Fonts] (https://fonts.google.com/)
-    - The project uses **Google Fonts** to display beautiful and free fonts.
+  - The project uses **Bootstrap** to simplify managing layout and CSS elements.
+
+- [Google Fonts](https://fonts.google.com/)
+
+  - The project uses **Google Fonts** to display beautiful and free fonts.
 
 - [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
-
+  - The project uses **JQuery** to simplify DOM manipulation.
 
 ## Testing
 
 Basic set-up:
+
 1. Added boostrap framework and tested by creating simple container and jumbotron classes.
 2. Added font-awesome and tested by displaying icons.
-3. 
+3. Added and tested external js file. The file will be used for getting data from google maps API.
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
@@ -56,10 +59,10 @@ Whenever it is feasible, prefer to automate your tests, and if you've done so, p
 For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
 
 1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
+   1. Go to the "Contact Us" page
+   2. Try to submit the empty form and verify that an error message about the required fields appears
+   3. Try to submit the form with an invalid email address and verify that a relevant error message appears
+   4. Try to submit the form with all inputs valid and verify that a success message appears.
 
 In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
 
@@ -72,22 +75,23 @@ If this section grows too long, you may want to split it off into a separate fil
 This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
 
 In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
+
 - Different values for environment variables (Heroku Config Vars)?
 - Different configuration files?
 - Separate git branch?
 
 In addition, if it is not obvious, you should also describe how to run your code locally.
 
-
 ## Credits
 
 ### Content
+
 - The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
 
 ### Media
-- The photos used in this site were obtained from ...
+
+- Search Box background image: travelimagetransparent.png obtained from https://bento.cdn.pbs.org/hostedbento-prod/filer_public/master%20images/SECE/Travel/travelimagetransparent.png
 
 ### Acknowledgements
 
 - I received inspiration for this project from X
-

@@ -1,9 +1,17 @@
 body {
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: "Open Sans Condensed", sans-serif;
 }
 
 .navbar,
 .navbar-brand {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 2rem;
+}
+
+.jumbotron {
+  background-image: url("./img/travelimagetransparent2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 700px;
 }
