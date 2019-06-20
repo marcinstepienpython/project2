@@ -148,7 +148,7 @@ function callback(results, status) {
   str += "</ul>";
 
   document.getElementById("hotel-header").innerHTML =
-    'Hotels <img src="http://maps.google.com/mapfiles/ms/icons/green-dot.png" alt="Hotels">';
+    '<h3>Hotels <img src="http://maps.google.com/mapfiles/ms/icons/green-dot.png" alt="Hotels"></h3>';
   document.getElementById("restaurants").innerHTML = str;
 }
 
@@ -196,6 +196,6 @@ function callbackHotels(results, status) {
   str += "</ul>";
 
   document.getElementById("restaurant-header").innerHTML =
-    'Restaurants <img src="http://maps.google.com/mapfiles/ms/icons/yellow-dot.png" alt="Restaurants">';
+    '<h3>Restaurants <img src="http://maps.google.com/mapfiles/ms/icons/yellow-dot.png" alt="Restaurants"></h3>';
   document.getElementById("hotels").innerHTML = str;
 }
