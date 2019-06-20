@@ -106,6 +106,8 @@ Google Maps API:
 
 The Application has been deployed to GitHub Pages. There is no difference between development and production version of the system. No environemnt variables have been used.
 
+The application is available here: https://marcinstepienpython.github.io/project2/
+
 ### Content
 
 - All data presented on maps, listings and pictures are received through google maps API.
