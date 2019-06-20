@@ -3,7 +3,7 @@ var infoWindow;
 
 function initMap() {
   var options = {
-    zoom: 15,
+    zoom: 6,
     center: {
       lat: 53.35014,
       lng: -6.266155
