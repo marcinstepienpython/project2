@@ -3,7 +3,7 @@ var infoWindow;
 
 function initMap() {
   var options = {
-    zoom: 6,
+    zoom: 15,
     center: {
       lat: 53.35014,
       lng: -6.266155
@@ -23,7 +23,7 @@ function initMap() {
 
   searchBox.addListener("places_changed", function() {
     var places = searchBox.getPlaces();
-
+    console.log(places);
     document.getElementById("locationName").innerHTML = places[0].name;
 
     let location = {
@@ -31,11 +31,8 @@ function initMap() {
       lng: places[0].geometry.location.lng()
     };
 
-    let buttonRestaurants = document.getElementById("button-restaurants");
-    buttonRestaurants.onclick = () => getRestaurants(location);
-
-    let buttonHotels = document.getElementById("button-hotels");
-    buttonHotels.onclick = () => getHotels(location);
+    getRestaurants(location);
+    getHotels(location);
 
     if (places.length === 0) {
       return;
@@ -123,8 +120,6 @@ function callback(results, status) {
       bindInfoWindow(marker, map, infoWindow, content);
       marker.setMap(map);
     });
-
-    console.log(places);
   }
 
   function bindInfoWindow(marker, map, infoWindow, html) {
@@ -140,6 +135,8 @@ function callback(results, status) {
   }
   str += "</ul>";
 
+  document.getElementById("hotel-header").innerHTML =
+    'Hotels <img src="http://maps.google.com/mapfiles/ms/icons/green-dot.png" alt="Hotels">';
   document.getElementById("restaurants").innerHTML = str;
 }
 
@@ -150,7 +147,7 @@ function callbackHotels(results, status) {
     for (let i = 0; i < results.length; i++) {
       places.push(results[i]);
     }
-    console.log(places);
+
     places.forEach(place => {
       let content = `<h3>${place.name}</h3>
           <p>${place.vicinity}</p>
@@ -185,5 +182,7 @@ function callbackHotels(results, status) {
   }
   str += "</ul>";
 
+  document.getElementById("restaurant-header").innerHTML =
+    'Restaurants <img src="http://maps.google.com/mapfiles/ms/icons/yellow-dot.png" alt="Restaurants">';
   document.getElementById("hotels").innerHTML = str;
 }

@@ -52,11 +52,11 @@
               HolidayPal
             </h1>
             <h3 class="text-center">Find hotels. Restaurants. Activities.</h3>
-            <h3 class="text-center mt-5">Where are you going?</h3>
+            <!-- <h3 class="text-center mt-5">Where are you going?</h3> -->
             <input
             id='search'
               type="text"
-              class="form-control p-4 col-md-4 offset-md-4 mt-3"
+              class="location-search form-control p-3 col-md-6 offset-md-3 mt-3 input-lg"
               placeholder="Enter your destination here:"
             />
           </div>
@@ -78,14 +78,14 @@
         </div>
         <div class="row">
             <div class="col-md-6 text-center mt-3">
-                <h3>Hotels</h3>
+                <h3><div id='hotel-header'></div></h3>
                 <div id='hotels'></div>
-                <button class="btn btn-warning" id='button-hotels'>Show on the map</button>
+                
             </div>
             <div class="col-md-6 text-center mt-3">
-                    <h3>Restaurants</h3>
+                    <h3><div id='restaurant-header'></div></h3>
                     <div id='restaurants'></div>
-                    <button class="btn btn-success" id='button-restaurants'>Show on the map</button>
+                   
                 </div>
         </div>
         
