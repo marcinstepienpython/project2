@@ -1,8 +1,8 @@
 # HolidayPal
 
-One or two paragraphs providing an overview of your project.
+A Single Page Application providing users with all the information about accommodation, restaurants and activities available in a selected location. The information is displayed both on a map and as a text.
 
-Essentially, this part is your sales pitch.
+
  
 ## UX
  
