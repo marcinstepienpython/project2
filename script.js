@@ -103,8 +103,8 @@ function callback(results, status) {
     for (let i = 0; i < results.length; i++) {
       places.push(results[i]);
     }
+
     places.forEach(place => {
-      console.log(place);
       let content = `<h4>${place.name}</h4>
         <p>${place.vicinity}</p>
         <h4>Rating: ${place.rating}</h4>`;
@@ -123,6 +123,8 @@ function callback(results, status) {
       bindInfoWindow(marker, map, infoWindow, content);
       marker.setMap(map);
     });
+
+    console.log(places);
   }
 
   function bindInfoWindow(marker, map, infoWindow, html) {
@@ -131,6 +133,14 @@ function callback(results, status) {
       infoWindow.open(map, this);
     });
   }
+  let str = "<ul class='list-group list-group-flush'>";
+
+  for (let i = 0; i < 5; i++) {
+    str += "<li class='list-group-item'>" + places[i].name + "</li>";
+  }
+  str += "</ul>";
+
+  document.getElementById("restaurants").innerHTML = str;
 }
 
 function callbackHotels(results, status) {
@@ -140,8 +150,8 @@ function callbackHotels(results, status) {
     for (let i = 0; i < results.length; i++) {
       places.push(results[i]);
     }
+    console.log(places);
     places.forEach(place => {
-      console.log(place);
       let content = `<h3>${place.name}</h3>
           <p>${place.vicinity}</p>
           Rating: ${place.rating}`;
@@ -168,4 +178,12 @@ function callbackHotels(results, status) {
       infoWindow.open(map, this);
     });
   }
+  let str = "<ul class='list-group list-group-flush'>";
+
+  for (let i = 0; i < 5; i++) {
+    str += "<li class='list-group-item'>" + places[i].name + "</li>";
+  }
+  str += "</ul>";
+
+  document.getElementById("hotels").innerHTML = str;
 }
