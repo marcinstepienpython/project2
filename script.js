@@ -24,6 +24,7 @@ function initMap() {
   searchBox.addListener("places_changed", function() {
     var places = searchBox.getPlaces();
 
+    // PRESENTING PICTURE OF THE DESTINATION
     let img =
       "<img src='" +
       places[0].photos[0].getUrl() +
@@ -31,6 +32,7 @@ function initMap() {
 
     document.getElementById("images").innerHTML = img;
 
+    // PRESENTING NAME OF THE DESTINATION
     document.getElementById("locationName").innerHTML = places[0].name;
 
     let location = {
@@ -38,6 +40,7 @@ function initMap() {
       lng: places[0].geometry.location.lng()
     };
 
+    // GET DATA FROM THE DESIRED LOCATION
     getRestaurants(location);
     getHotels(location);
 
@@ -73,7 +76,7 @@ function initMap() {
     });
   });
 }
-
+// FUNCTION TO GET RESTAURANTS IN THE AREA
 function getRestaurants(location) {
   let targetLocation = new google.maps.LatLng(location.lat, location.lng);
 
@@ -86,7 +89,7 @@ function getRestaurants(location) {
   service = new google.maps.places.PlacesService(map);
   service.nearbySearch(request, callback);
 }
-
+// FUNCTION TO GET HOTELS IN THE AREA
 function getHotels(location) {
   let targetLocation = new google.maps.LatLng(location.lat, location.lng);
 
@@ -107,7 +110,7 @@ function callback(results, status) {
     for (let i = 0; i < results.length; i++) {
       places.push(results[i]);
     }
-
+    // PRESENTING MARKERS LABEL
     places.forEach(place => {
       let content = `<h4>${place.name}</h4>
         <p>${place.vicinity}</p>
@@ -135,6 +138,8 @@ function callback(results, status) {
       infoWindow.open(map, this);
     });
   }
+
+  // CREATING LISTING OF HOTELS
   let str = "<ul class='list-group list-group-flush'>";
 
   for (let i = 0; i < 5; i++) {
@@ -182,6 +187,7 @@ function callbackHotels(results, status) {
       infoWindow.open(map, this);
     });
   }
+  // CREATING LISTING OF RESTAURANTS
   let str = "<ul class='list-group list-group-flush'>";
 
   for (let i = 0; i < 5; i++) {
