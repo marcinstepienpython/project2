@@ -13,5 +13,8 @@ body {
   background-image: url("./img/travelimagetransparent2.png");
   background-repeat: no-repeat;
   background-size: contain;
-  min-height: 700px;
+}
+
+#map {
+  height: 400px;
 }

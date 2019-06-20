@@ -45,7 +45,7 @@
 
     <!-- SEARCH BOX SECTION -->
     <header id="search-box">
-      <div class="jumbotron">
+      <div class="jumbotron mb-0">
         <div class="row mt-4">
           <div class="col-md">
             <h1 class="display-5 text-center">
@@ -54,14 +54,39 @@
             <h3 class="text-center">Find hotels. Restaurants. Activities.</h3>
             <h3 class="text-center mt-5">Where are you going?</h3>
             <input
+            id='search'
               type="text"
-              class="form-control col-md-4 offset-md-4 mt-3"
+              class="form-control p-4 col-md-4 offset-md-4 mt-3"
               placeholder="Enter your destination here:"
             />
           </div>
         </div>
       </div>
     </header>
+
+    <!-- MAP SECTION-->
+    <section class='map''>
+      <div id='map'></div>
+    </section>
+
+    <!-- INFO SECTION -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 offset-md-4 text-center">
+                <h1 class='display-5' id='locationName'></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <h3>Hotels</h3>
+                <button class="btn btn-warning" id='button-hotels'>Show Hotels</button>
+            </div>
+            <div class="col-md-6 text-center">
+                    <h3>Restaurants</h3>
+                    <button class="btn btn-success" id='button-restaurants'>Show Restaurants</button>
+                </div>
+        </div>
+    </div>
 
     <!-- BOOTSTRAP -->
     <script
@@ -78,6 +103,13 @@
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
+    ></script>
+    <!-- GOOGLEMAPS SCRIPT -->
+
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANfHRET8dTHHz6-GpLb10iZaoY0TxG-vM&callback=initMap&libraries=places"
     ></script>
   </body>
 </html>
