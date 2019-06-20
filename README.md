@@ -1,33 +1,53 @@
 # HolidayPal
 
-A Single Page Application providing users with all the information about accommodation, restaurants and activities available in a selected location. The information is displayed both on a map and as a text.
+A Single Page Application helping user manage their next trip. The application shows the destinatnion provided by the user on the map. It gives information about hotels and restaurants available in the area. More over application presents a nice image of the selected location. The main goal of the project is to show a sample application of google maps API.
 
 ## UX
 
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+HolidayPal is designed for users willing to travel and visit new places. The layout of the webstie consists of 5 sections:
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
+THE LAYOUT:
 
-- As a user type, I want to perform an action, so that I can achieve a goal.
+- MAIN NAVIGATION:
 
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+  - User will have a possibiliy to register/login to use customized services.
+
+- SEARCH SECTION:
+
+  - User provides information about desired destination
+  - User provides information about desired activity (e.g. golf near tramore)
+
+- MAP:
+
+  - displaying map of selected destination together with hotel and restaurant markers.
+
+- LIST OF HOTELS AND RESTAURANTS:
+
+  - List of recommened hotels and restaurants (at the moment listing of 5 objects)
+
+- DESTINATION PICTURE:
+  - Presentation of one image provided by google maps search.
+
+USER SCENARIOS:
+
+1. User wants is planning their vistin in Doolin. By entering "Doolin" in the search box, he/she gets the map of possible places to stay and nearby restaurants. By selecting marker on a map the user get the rating of the place. By zooming in the user gets an access to all informarion provided by google maps.
+
+2. User wants to find outdoor activities in a selected destination. By entering 'golf tramore', he/she gets information about golf clubs in the area. The map and listing below the map shows recommended places to stay or to have lunch.
 
 ## Features
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
+HolidayPal is an initial project with an aim to build a travel recommendation portal for users seeking information about locations, hotels and restaurants in selected areas.
 
 ### Existing Features
 
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
-
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+- Search: user is able to enter desired location or activity. Based on his/her entry the system returns information available through google maps API.
+- Google Maps: user is able to take full advantage of functionality offered by google maps.
 
 ### Features Left to Implement
 
-- Another feature idea
+- myAccount: user will be able to create account to use personalised services such as: initial booking, discounts, rating, payment.
+
+- Rating system: currently system provides listing based on first 5 objects returned from google maps API. Future system will include own rating system based on user opinions.
 
 ## Technologies Used
 
@@ -42,7 +62,17 @@ HolidayPal uses following frameworks:
   - The project uses **Google Fonts** to display beautiful and free fonts.
 
 - [JQuery](https://jquery.com)
+
   - The project uses **JQuery** to simplify DOM manipulation.
+
+- [Google Maps Platform](https://developers.google.com/maps/documentation/)
+  - The project uses **Maps JavaScript API** to provide information and presentation of desired locations.
+
+The site has been created using:
+
+- HTML
+- CSS
+- JavaScript
 
 ## Testing
 
@@ -52,41 +82,33 @@ Basic set-up:
 2. Added font-awesome and tested by displaying icons.
 3. Added and tested external js file. The file will be used for getting data from google maps API.
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+Layout:
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
+1. Testing site responsiveness:
+   - google developer tools:
+     - site has been tested on all available devices (Galaxy, iPhone, iPad)
+   - mobile phones (Huawei P8, iPhone 8, iPhone 6)
+   - tablets (Samsung Galaxy Tab)
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+Google Maps API:
 
-1. Contact form:
-   1. Go to the "Contact Us" page
-   2. Try to submit the empty form and verify that an error message about the required fields appears
-   3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-   4. Try to submit the form with all inputs valid and verify that a success message appears.
+1. Testing user scenarios:
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+   - test: Doolin -> success: system provides user with accurate information from the destination. All the markers are presented on the map and in the listing below the map. System presents beautifull picture of Doolin seaside.
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+   - test: golf tramore -> success: systems returns relevant data from Tramore. Golf clubs as well as hotels and restaurants are shown. System presents nice picture ot Tramore Golf Club
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+   - test: Honolulu, Toivakka, Finland -> failure: system doesn't show anything. This location is a tiny island close to Finland. No hotels, no restaurants. System doesn't receive expected data from google maps API. This error should be addressed in future.
+
+   - test: Alleghe, Province of Belluno, Italy -> success: all data received from google maps API. Information presented on the map and in the listing. Picture of Alleghe shown below the listing.
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
-
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
-
-In addition, if it is not obvious, you should also describe how to run your code locally.
-
-## Credits
+The Application has been deployed to GitHub Pages. There is no difference between development and production version of the system. No environemnt variables have been used.
 
 ### Content
 
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+- All data presented on maps, listings and pictures are received through google maps API.
 
 ### Media
 
@@ -94,4 +116,4 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 ### Acknowledgements
 
-- I received inspiration for this project from X
+- I received inspiration for this project mainly from my own experience in using the Internet as a source of information for travel destination.
