@@ -23,7 +23,14 @@ function initMap() {
 
   searchBox.addListener("places_changed", function() {
     var places = searchBox.getPlaces();
-    console.log(places);
+
+    let img =
+      "<img src='" +
+      places[0].photos[0].getUrl() +
+      "' alt='location' class='img-fluid'/>";
+
+    document.getElementById("images").innerHTML = img;
+
     document.getElementById("locationName").innerHTML = places[0].name;
 
     let location = {
