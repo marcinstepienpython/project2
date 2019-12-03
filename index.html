@@ -1,125 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script src="https://kit.fontawesome.com/b9f8ead5bd.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300"
-      rel="stylesheet"
-    />
 
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js"></script>
-    <title>HolidayPal</title>
-  </head>
-  <body>
-     <!-- MAIN NAVIGATION-->
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-      <div class="container">
-        <a href="#home" class="navbar-brand">HolidayPal</a>
-        <button
-          class="navbar-toggler"
-          data-toggle="collapse"
-          data-target="#navbarCollapse"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a href="#home" class="nav-link">myAccount</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <script src="https://kit.fontawesome.com/b9f8ead5bd.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet" />
 
-    <!-- SEARCH BOX SECTION -->
-    <header id="search-box">
-      <div class="jumbotron mb-0">
-        <div class="row mt-3">
-          <div class="col-md">
-            <h1 class="display-5 text-center">
-              HolidayPal
-            </h1>
-            <h3 class="text-center">Find hotels. Restaurants. Activities.</h3>
-            <!-- <h3 class="text-center mt-5">Where are you going?</h3> -->
-            <input
-            id='search'
-              type="text"
-              class="location-search form-control p-3 col-md-6 offset-md-3 mt-3 input-lg"
-              placeholder="Enter your destination here:"
-            />
-          </div>
-        </div>
-      </div>
-    </header>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./script.js"></script>
+  <title>HolidayPal</title>
+</head>
 
-    <!-- MAP SECTION-->
-    <section class='map'>
-      <div id='map'></div>
-    </section>
-
-    <!-- INFO SECTION -->
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-4 offset-md-4 text-center ">
-                <h1 class='display-5' id='locationName'></h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 text-center mt-3">
-                <div id='hotel-header'></div>
-                <div id='hotels'></div>
-                
-            </div>
-            <div class="col-md-6 text-center mt-3">
-                    <div id='restaurant-header'></div>
-                    <div id='restaurants'></div>
-            </div>
-        </div>
-        
-    </div>
-    <!-- PICTURE SECTION -->
+<body>
+  <!-- MAIN NAVIGATION-->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="container">
-      <div class="row mt-5 mb-5">
-        <div class="col-md-8 offset-md-2">
-            <div id='images'></div>
-        </div>
-     </div>
-
+      <a href="#home" class="navbar-brand">HolidayPal</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="#home" class="nav-link">myAccount</a>
+          </li>
+        </ul>
+      </div>
     </div>
- 
-    <!-- BOOTSTRAP -->
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    
-    <!-- GOOGLEMAPS SCRIPT -->
-    <script
-      async
-      defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANfHRET8dTHHz6-GpLb10iZaoY0TxG-vM&callback=initMap&libraries=places"
-    ></script>
-  </body>
+  </nav>
+
+  <!-- SEARCH BOX SECTION -->
+  <header id="search-box">
+    <div class="jumbotron mb-0">
+      <div class="row mt-3">
+        <div class="col-md">
+          <h1 class="display-5 text-center">
+            HolidayPal
+          </h1>
+          <h3 class="text-center">Find hotels. Restaurants. Activities.</h3>
+          <!-- <h3 class="text-center mt-5">Where are you going?</h3> -->
+          <input id='search' type="text" class="location-search form-control p-3 col-md-6 offset-md-3 mt-3 input-lg"
+            placeholder="Enter your destination here:" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAP SECTION-->
+  <section class='map'>
+    <div id='map'></div>
+  </section>
+
+  <!-- INFO SECTION -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4 offset-md-4 text-center ">
+        <h1 class='display-5' id='locationName'></h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 text-center mt-3">
+        <div id='hotel-header'></div>
+        <div id='hotels'></div>
+
+      </div>
+      <div class="col-md-6 text-center mt-3">
+        <div id='restaurant-header'></div>
+        <div id='restaurants'></div>
+      </div>
+    </div>
+
+  </div>
+  <!-- PICTURE SECTION -->
+  <div class="container">
+    <div class="row mt-5 mb-5">
+      <div class="col-md-8 offset-md-2">
+        <div id='images'></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOOTSTRAP -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <!-- GOOGLEMAPS SCRIPT -->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2O3egqOVawDdIbQ78fOERoWyw_9GyZFA&callback=initMap&libraries=places"></script>
+</body>
+
 </html>
